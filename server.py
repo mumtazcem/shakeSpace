@@ -7,6 +7,7 @@ from flask import Flask
 
 from handlers import site
 from cem import cem
+from ipek import ipek
 
 def create_app():
     app = Flask(__name__)
@@ -14,6 +15,7 @@ def create_app():
     # blueprints
     app.register_blueprint(site)
     app.register_blueprint(cem)
+    app.register_blueprint(ipek)
     
     return app
 

@@ -11,9 +11,10 @@ from cem import cem
 from ipek import ipek
 from batuhan import batuhan
 
+port = int(os.getenv("VCAP_APP_PORT"))
+    
 def create_app():
     app = Flask(__name__)
-    port = int(os.getenv("VCAP_APP_PORT"))
     app.config.from_object('settings')
     # blueprints
     app.register_blueprint(site)

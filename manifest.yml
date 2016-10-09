@@ -1,0 +1,7 @@
+---
+applications:
+- name: shakeSpace
+  host: shakeSpace-${random-word}
+  command: python server.py
+  buildpack: https://github.com/joshuamckenty/heroku-buildpack-python
+  memory: 128M
